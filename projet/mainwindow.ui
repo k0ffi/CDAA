@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1500</width>
+    <height>1200</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>500</width>
+    <height>100</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>-2</x>
+      <y>3</y>
+      <width>1501</width>
+      <height>851</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QComboBox" name="listContacts"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="bValider">
+         <property name="text">
+          <string>Valider</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPlainTextEdit" name="textContact">
+         <property name="minimumSize">
+          <size>
+           <width>250</width>
+           <height>0</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="Photo">
+         <property name="minimumSize">
+          <size>
+           <width>400</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QPushButton" name="bVoirNbContacts">
+         <property name="text">
+          <string>Voir le nombre de Contacts</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="nbContacts">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QDateEdit" name="dateDebInteraction"/>
+       </item>
+       <item>
+        <widget class="QDateEdit" name="dateFinInteraction"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="bVoirInteractions">
+         <property name="text">
+          <string>Voir les Interactions</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPlainTextEdit" name="textInteraction">
+         <property name="minimumSize">
+          <size>
+           <width>300</width>
+           <height>0</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QComboBox" name="listContacts_2"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="bVoirTodos">
+         <property name="text">
+          <string>Voir les Todos</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPlainTextEdit" name="textTodo">
+         <property name="minimumSize">
+          <size>
+           <width>300</width>
+           <height>0</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>-1</x>
+      <y>989</y>
+      <width>1501</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QPushButton" name="bQuitter">
+       <property name="text">
+        <string>Quitter l'application</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1500</width>
+     <height>36</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuContact">
+    <property name="title">
+     <string>Contact</string>
+    </property>
+    <addaction name="addContact"/>
+    <addaction name="removeContact"/>
+    <addaction name="updateContact"/>
+   </widget>
+   <widget class="QMenu" name="menuInteraction">
+    <property name="title">
+     <string>Interaction</string>
+    </property>
+    <addaction name="addInteraction"/>
+    <addaction name="interactionByContact"/>
+   </widget>
+   <addaction name="menuContact"/>
+   <addaction name="menuInteraction"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="addContact">
+   <property name="text">
+    <string>Ajouter un Contact</string>
+   </property>
+  </action>
+  <action name="removeContact">
+   <property name="text">
+    <string>Supprimer un Contact</string>
+   </property>
+  </action>
+  <action name="updateContact">
+   <property name="text">
+    <string>Mettre à jour un Contact</string>
+   </property>
+  </action>
+  <action name="addInteraction">
+   <property name="text">
+    <string>Ajouter une Interaction</string>
+   </property>
+  </action>
+  <action name="interactionByContact">
+   <property name="text">
+    <string>Voir les Interactions d'un Contact</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
